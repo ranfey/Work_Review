@@ -78,7 +78,8 @@
         try {
           await invoke('disable_autostart');
         } catch (e) {
-          console.error('设置开机自启动失败:1', e);
+          console.error('未知原因报错os error -2147024891 但是确实已经正常移除了开机自启动', e);
+          //处理报错防止autoStartEnabled不更新
         }
       } else {
         await invoke('enable_autostart');
